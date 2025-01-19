@@ -1,49 +1,338 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: "Roboto", sans-serif; /* Default font for body text */
+    line-height: 1.6;
+    color: #333;
+    background: rgb(80, 129, 255);
+    scroll-behavior: smooth;
+}
+
+.custom-shape-divider-bottom-1737248207 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1737248207 svg {
+    position: relative;
+    display: block;
+    width: calc(113% + 1.3px);
+    height: 192px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1737248207 .shape-fill {
+    fill: rgb(80, 129, 255);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: "Oswald", sans-serif; /* Bold and modern font for headings */
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-container {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+        url("../public/dog-walking.jpg") no-repeat center/cover;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  form {
-    max-width: 500px;
-    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgb(55, 89, 176);
+    padding: 20px 40px;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.cta-button {
+    background: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    margin: 80px auto;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    font-weight: bolder;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.about-divider {
+    width: 60px;
+    height: 5px;
+    background: #4ca0ff;
+    margin: 20px auto;
+    border-radius: 50px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url("../public/dog-training.jpg") no-repeat center/cover;
+    color: white;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Service Items */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
     background: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.service p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: none; /* Remove background */
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  input,
-  textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  button {
-    background-color: #007bff;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+form input, form textarea, form select {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    background: #007bff;
     color: white;
-    border: none;
-    padding: 10px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(106, 17, 203, 0.3);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+footer a {
+    color: #f39c12;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #d35400;
+}
+
+
+/* Left Side Animation (Downwards) */
+.paw-animation-left {
+    position: fixed;
+    top: -100px; /* Start off-screen */
+    left: 20px; /* Position on the left side */
+    display: flex;
+    flex-direction: column; /* Stack the paw prints vertically */
+    gap: 50px; /* Spacing between paw prints */
+    z-index: 999; /* Ensure it appears above other content */
+    animation: paw-walk-vertical-down 8s linear infinite; /* Infinite animation */
+}
+
+.paw-animation-right {
+    position: fixed;
+    bottom: -100px; /* Start off-screen */
+    right: 20px; /* Position on the right side */
+    display: flex;
+    flex-direction: column; /* Stack the paw prints vertically */
+    gap: 50px; /* Spacing between paw prints */
+    z-index: 999; /* Ensure it appears above other content */
+    animation: paw-walk-vertical-up 8s linear infinite; /* Infinite animation */
+}
+
+.paw-left {
+    width: 40px; /* Size of paw prints */
+    opacity: 0.8; /* Slightly transparent for style */
+    transform: rotate(180deg); /* Slight rotation for realism */
+}
+.paw-right {
+    width: 40px; /* Size of paw prints */
+    opacity: 0.8; /* Slightly transparent for style */
+    transform: rotate(0deg); /* Slight rotation for realism */
+}
+
+
+/* Keyframes for Downwards Animation */
+@keyframes paw-walk-vertical-down {
+    0% {
+        top: -150px; /* Start off-screen above the viewport */
+    }
+    100% {
+        top: 100%; /* Move completely to the bottom of the viewport */
+    }
+}
+
+/* Keyframes for Upwards Animation */
+@keyframes paw-walk-vertical-up {
+    0% {
+        bottom: -150px; /* Start off-screen below the viewport */
+    }
+    100% {
+        bottom: 100%; /* Move completely to the top of the viewport */
+    }
+}
