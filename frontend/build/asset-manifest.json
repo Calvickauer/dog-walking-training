@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.420cf655.css",
+    "main.js": "/static/js/main.aa8a1f8b.js",
+    "static/media/dog-training.jpg": "/static/media/dog-training.387686544e90ff245e36.jpg",
+    "static/media/dog-walking.jpg": "/static/media/dog-walking.c5c5a597bd95c2452e2f.jpg",
+    "index.html": "/index.html",
+    "main.420cf655.css.map": "/static/css/main.420cf655.css.map",
+    "main.aa8a1f8b.js.map": "/static/js/main.aa8a1f8b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.420cf655.css",
+    "static/js/main.aa8a1f8b.js"
+  ]
+}

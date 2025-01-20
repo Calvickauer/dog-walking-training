@@ -50,7 +50,7 @@ a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
         url("../public/dog-walking.jpg") no-repeat center/cover;
     height: 100vh;
     display: flex;
@@ -291,7 +291,7 @@ footer a:hover {
     flex-direction: column; /* Stack the paw prints vertically */
     gap: 50px; /* Spacing between paw prints */
     z-index: 999; /* Ensure it appears above other content */
-    animation: paw-walk-vertical-down 8s linear infinite; /* Infinite animation */
+    animation: paw-walk-vertical-down 20s linear infinite; /* Infinite animation */
 }
 
 .paw-animation-right {
@@ -302,7 +302,8 @@ footer a:hover {
     flex-direction: column; /* Stack the paw prints vertically */
     gap: 50px; /* Spacing between paw prints */
     z-index: 999; /* Ensure it appears above other content */
-    animation: paw-walk-vertical-up 8s linear infinite; /* Infinite animation */
+    animation: paw-walk-vertical-up 20s linear infinite; /* Infinite animation */
+    animation-delay: 20s;
 }
 
 .paw-left {
