@@ -476,4 +476,9 @@ footer a:hover {
         font-size: 0.9rem;
         padding: 10px 15px;
     }
+
+    .rights{
+        width: 75svw;
+        margin: auto;
+    }
 }

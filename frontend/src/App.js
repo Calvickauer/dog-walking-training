@@ -117,7 +117,7 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2025 Calvin's Dog Walking & Training Services. All rights reserved.</p>
+        <p className="rights">&copy; 2025 Calvin's Dog Walking & Training Services. All rights reserved.</p>
       </footer>
     </div>
   );
