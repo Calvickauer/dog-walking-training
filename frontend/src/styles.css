@@ -337,3 +337,143 @@ footer a:hover {
         bottom: 100%; /* Move completely to the top of the viewport */
     }
 }
+
+/* General Styles for Mobile */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* About Section */
+    .about {
+        padding: 30px 10px;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* Services Section */
+    .services {
+        background-attachment: scroll; /* Disable parallax on mobile */
+        padding: 50px 10px;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        flex-direction: column; /* Stack services vertically */
+        gap: 20px;
+    }
+
+    .service {
+        width: 90%; /* Full width on smaller screens */
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 50px 10px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form input, form textarea, form select {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+    }
+
+    /* Paw Print Animation */
+    .paw-animation-left, .paw-animation-right {
+        display: none; /* Hide animations on smaller screens for simplicity */
+    }
+}
+
+/* Styles for Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        background: rgba(27, 6, 255, 0.344);
+        padding: 20px 40px;
+        border-radius: 12px;
+        color: rgb(255, 255, 255);
+        width: 150px;
+        border-radius: 20px;
+    }
+
+    .custom-shape-divider-bottom-1737248207 .shape-fill {
+        fill: rgba(80, 130, 255, 0);
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .about h2, .services h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p, .service p {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
