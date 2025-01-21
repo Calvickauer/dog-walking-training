@@ -18,7 +18,6 @@ function App() {
           });
       
           if (response.ok) {
-            alert("Form submitted successfully!");
             form.reset(); // Optional: Reset the form after successful submission
           } else {
             const errorData = await response.json();
