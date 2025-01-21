@@ -2,19 +2,35 @@ import React from "react";
 import "./styles.css";
 
 function App() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const form = e.target;
-    const email = form.elements.email.value;
-
-    if (!email) {
-      alert("Please provide an email.");
-      return;
-    }
-
-    alert("Form submitted successfully!");
-  };
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+      
+        const form = e.target;
+        const formData = new FormData(form);
+      
+        try {
+          const response = await fetch("https://formspree.io/f/meoowqdb", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+      
+          if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset(); // Optional: Reset the form after successful submission
+          } else {
+            const errorData = await response.json();
+            console.error("Error:", errorData);
+            alert("Failed to submit the form. Please try again later.");
+          }
+        } catch (error) {
+          console.error("Submission error:", error);
+          alert("An error occurred. Please try again later.");
+        }
+      };
+      
 
   return (
     <div className="app-container">
@@ -80,8 +96,8 @@ function App() {
           <input type="email" name="email" placeholder="Your Email" required />
           <select name="service" required>
             <option value="">Select a Service</option>
-            <option value="Dog Walking (1 Hour)">Dog Walking</option>
-            <option value="Training (1 Hour)">Training</option>
+            <option value="Dog Walking">Dog Walking</option>
+            <option value="Training">Training</option>
             <option value="Dog Walking + Training">Dog Walking + Training</option>
             <option value="Other Animal Care">Other Animal Care</option>
           </select>
