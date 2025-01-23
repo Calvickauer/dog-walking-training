@@ -29,9 +29,16 @@ body {
     transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1737248207 .shape-fill {
+.custom-shape-divider-bottom-1737248207 .shape-fill2 {
     fill: rgb(80, 129, 255);
 }
+.custom-shape-divider-bottom-1737248207 .shape-fill1 {
+    fill: rgb(26, 170, 110);
+}
+.custom-shape-divider-bottom-1737248207 .shape-fill {
+    fill: rgb(144, 255, 80);
+}
+
 
 h1, h2, h3 {
     margin: 0;
